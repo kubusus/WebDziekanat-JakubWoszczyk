@@ -1,0 +1,76 @@
+﻿<Page x:Class="WebDziekanat.HomePage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:WebDziekanat"
+      mc:Ignorable="d"
+      Title="HomePage"
+      Background="White" Height="528.4" Width="969.6">
+
+
+    <DockPanel>
+
+
+
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+            </Grid.RowDefinitions>
+
+            <StackPanel Margin="10">
+                <TextBlock FontWeight="Black">Your data</TextBlock>
+                <local:DataField Badge="Name" Content="Jakub"/>
+                <local:DataField Badge="Surname" Content="Woszczyk"/>
+                <local:DataField Badge="index nr" Content="223982"/>
+                <local:DataField Badge="Faculty" Content="IFE"/>
+                <local:DataField Badge="Course" Content="Computer Science"/>
+            </StackPanel>
+
+            <StackPanel Grid.Column="1" Margin="10">
+                <TextBlock FontWeight="Black">Abut the course</TextBlock>
+                <local:DataField Badge="Mode of study" Content="full-time"/>
+                <local:DataField Badge="nr of years" Content="3.5" x:Name="years"/>
+                <local:DataField Badge="nr of semesters" Content="7" x:Name="semesters"/>
+
+                <Grid>
+                    <ProgressBar Name="YearProgress"
+                                 Foreground="Gold"
+                                 Minimum="0" Maximum="{Binding ElementName=years, Path=Content}" Value="3"
+                                 Height="20"/>
+                    <local:DataField Badge="Currenet year" Content="{Binding ElementName=YearProgress, Path=Value}"/>
+                </Grid>
+
+                <Grid>
+                    <ProgressBar Name="SemesterProgress"
+                                 Foreground="Gold"
+                                 Minimum="0" Maximum="{Binding ElementName=semesters, Path=Content}" Value="5"
+                                 Height="20"/>
+                    <local:DataField Badge="Current semester" Content="{Binding ElementName=SemesterProgress, Path=Value}"/>
+                </Grid>
+
+            </StackPanel>
+
+
+            <StackPanel Grid.Row="1" Margin="10">
+                <TextBlock FontWeight="Black">Stats:</TextBlock>
+                <Grid>
+                    <ProgressBar Name="AvgProgress"
+                                 Foreground="Gold"
+                                 Minimum="2" Maximum="5" Value="4.38"
+                                 Height="20"/>
+                    <local:DataField Badge="Total average" Content="{Binding ElementName=AvgProgress, Path=Value}"/>
+                </Grid>
+            </StackPanel>
+
+        </Grid>
+    </DockPanel>
+</Page>

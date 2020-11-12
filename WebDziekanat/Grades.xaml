@@ -1,0 +1,220 @@
+﻿<Page x:Class="WebDziekanat.Grades"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:WebDziekanat"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="Grades"
+      Background="White">
+
+    <Grid>
+
+        <TabControl x:Name="semesters_tabControl" HorizontalAlignment="Stretch">
+            <TabItem Header="1 semester" HorizontalAlignment="Stretch">
+
+                <DataGrid Name="semester1_DataGrid"
+                          AutoGenerateColumns="False"
+                          CanUserDeleteRows="False" CanUserAddRows="False"
+                          GridLinesVisibility="None"
+                          AlternatingRowBackground="LightGray">
+
+                    <DataGrid.Columns>
+
+                        <DataGridTemplateColumn Header="Id">
+                            <DataGridTemplateColumn.CellTemplate>
+                                <DataTemplate>
+                                    <TextBlock Text="{Binding Id}" Padding="10,0,10,0"/>
+                                </DataTemplate>
+                            </DataGridTemplateColumn.CellTemplate>
+                        </DataGridTemplateColumn>
+
+                        <DataGridTemplateColumn Header="Subject">
+                            <DataGridTemplateColumn.CellTemplate>
+                                <DataTemplate>
+                                    <TextBlock Text="{Binding Name}" Padding="10,0,10,0"/>
+                                </DataTemplate>
+                            </DataGridTemplateColumn.CellTemplate>
+                        </DataGridTemplateColumn>
+
+                        <DataGridTemplateColumn Header="Lecturer">
+                            <DataGridTemplateColumn.CellTemplate>
+                                <DataTemplate>
+                                    <TextBlock Text="{Binding Lecturer}" Padding="10,0,10,0"/>
+                                </DataTemplate>
+                            </DataGridTemplateColumn.CellTemplate>
+                        </DataGridTemplateColumn>
+
+                        <DataGridTemplateColumn Header="ECTS" Width="160">
+                            <DataGridTemplateColumn.CellTemplate>
+                                <DataTemplate>
+                                    <Grid>
+                                        <ProgressBar Minimum="0" Maximum="10" Value="{Binding ECTS}"
+                                                     Foreground="DarkRed"/>
+                                        <TextBlock Text="{Binding ECTS}"
+                                                   HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                                    </Grid>
+                                </DataTemplate>
+                            </DataGridTemplateColumn.CellTemplate>
+                        </DataGridTemplateColumn>
+
+                        <DataGridTemplateColumn Header="Grade" Width="160">
+                            <DataGridTemplateColumn.CellTemplate>
+                                <DataTemplate>
+                                    <Grid>
+                                        <ProgressBar Minimum="2" Maximum="5" Value="{Binding Grade}"
+                                                     Foreground="Gold"/>
+                                        <TextBlock Text="{Binding Grade}"
+                                                   HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                                    </Grid>
+                                </DataTemplate>
+                            </DataGridTemplateColumn.CellTemplate>
+                        </DataGridTemplateColumn>
+
+                    </DataGrid.Columns>
+
+                </DataGrid>
+            </TabItem>
+
+            <TabItem Header="2 semester">
+
+                <DataGrid Name="semester2_DataGrid"
+                          AutoGenerateColumns="False"
+                          CanUserDeleteRows="False" CanUserAddRows="False"
+                          GridLinesVisibility="None"
+                          AlternatingRowBackground="LightGray">
+
+                    <DataGrid.Columns>
+
+                        <DataGridTemplateColumn Header="Id">
+                            <DataGridTemplateColumn.CellTemplate>
+                                <DataTemplate>
+                                    <TextBlock Text="{Binding Id}" Padding="10,0,10,0"/>
+                                </DataTemplate>
+                            </DataGridTemplateColumn.CellTemplate>
+                        </DataGridTemplateColumn>
+
+                        <DataGridTemplateColumn Header="Subject">
+                            <DataGridTemplateColumn.CellTemplate>
+                                <DataTemplate>
+                                    <TextBlock Text="{Binding Name}" Padding="10,0,10,0"/>
+                                </DataTemplate>
+                            </DataGridTemplateColumn.CellTemplate>
+                        </DataGridTemplateColumn>
+
+                        <DataGridTemplateColumn Header="Lecturer">
+                            <DataGridTemplateColumn.CellTemplate>
+                                <DataTemplate>
+                                    <TextBlock Text="{Binding Lecturer}" Padding="10,0,10,0"/>
+                                </DataTemplate>
+                            </DataGridTemplateColumn.CellTemplate>
+                        </DataGridTemplateColumn>
+
+                        <DataGridTemplateColumn Header="ECTS" Width="160">
+                            <DataGridTemplateColumn.CellTemplate>
+                                <DataTemplate>
+                                    <Grid>
+                                        <ProgressBar Minimum="0" Maximum="10" Value="{Binding ECTS}"
+                                                     Foreground="DarkRed"/>
+                                        <TextBlock Text="{Binding ECTS}"
+                                                   HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                                    </Grid>
+                                </DataTemplate>
+                            </DataGridTemplateColumn.CellTemplate>
+                        </DataGridTemplateColumn>
+
+                        <DataGridTemplateColumn Header="Grade" Width="160">
+                            <DataGridTemplateColumn.CellTemplate>
+                                <DataTemplate>
+                                    <Grid>
+                                        <ProgressBar Minimum="2" Maximum="5" Value="{Binding Grade}"
+                                                     Foreground="Gold"/>
+                                        <TextBlock Text="{Binding Grade}"
+                                                   HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                                    </Grid>
+                                </DataTemplate>
+                            </DataGridTemplateColumn.CellTemplate>
+                        </DataGridTemplateColumn>
+
+                    </DataGrid.Columns>
+
+
+
+                </DataGrid>
+
+            </TabItem>
+
+            <TabItem Header="3 semester">
+
+                <DataGrid Name="semester3_DataGrid"
+                          AutoGenerateColumns="False"
+                          CanUserDeleteRows="False" CanUserAddRows="False"
+                          GridLinesVisibility="None"
+                          AlternatingRowBackground="LightGray">
+
+                    <DataGrid.Columns>
+
+                        <DataGridTemplateColumn Header="Id">
+                            <DataGridTemplateColumn.CellTemplate>
+                                <DataTemplate>
+                                    <TextBlock Text="{Binding Id}" Padding="10,0,10,0"/>
+                                </DataTemplate>
+                            </DataGridTemplateColumn.CellTemplate>
+                        </DataGridTemplateColumn>
+
+                        <DataGridTemplateColumn Header="Subject">
+                            <DataGridTemplateColumn.CellTemplate>
+                                <DataTemplate>
+                                    <TextBlock Text="{Binding Name}" Padding="10,0,10,0"/>
+                                </DataTemplate>
+                            </DataGridTemplateColumn.CellTemplate>
+                        </DataGridTemplateColumn>
+
+                        <DataGridTemplateColumn Header="Lecturer">
+                            <DataGridTemplateColumn.CellTemplate>
+                                <DataTemplate>
+                                    <TextBlock Text="{Binding Lecturer}" Padding="10,0,10,0"/>
+                                </DataTemplate>
+                            </DataGridTemplateColumn.CellTemplate>
+                        </DataGridTemplateColumn>
+
+                        <DataGridTemplateColumn Header="ECTS" Width="160">
+                            <DataGridTemplateColumn.CellTemplate>
+                                <DataTemplate>
+                                    <Grid>
+                                        <ProgressBar Minimum="0" Maximum="10" Value="{Binding ECTS}"
+                                                     Foreground="DarkRed"/>
+                                        <TextBlock Text="{Binding ECTS}"
+                                                   HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                                    </Grid>
+                                </DataTemplate>
+                            </DataGridTemplateColumn.CellTemplate>
+                        </DataGridTemplateColumn>
+
+                        <DataGridTemplateColumn Header="Grade" Width="160">
+                            <DataGridTemplateColumn.CellTemplate>
+                                <DataTemplate>
+                                    <Grid>
+                                        <ProgressBar Minimum="2" Maximum="5" Value="{Binding Grade}"
+                                                     Foreground="Gold"/>
+                                        <TextBlock Text="{Binding Grade}"
+                                                   HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                                    </Grid>
+                                </DataTemplate>
+                            </DataGridTemplateColumn.CellTemplate>
+                        </DataGridTemplateColumn>
+
+                    </DataGrid.Columns>
+
+
+
+                </DataGrid>
+
+            </TabItem>
+
+        </TabControl>
+        
+        
+    </Grid>
+</Page>
