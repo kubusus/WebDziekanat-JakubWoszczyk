@@ -15,28 +15,37 @@ using System.Windows.Shapes;
 
 namespace WebDziekanat
 {
-    /// <summary>
-    /// Interaction logic for MainWindow.xaml
-    /// </summary>
+    
     public partial class MainWindow : Window
     {
+
+        HomePage homePage = new HomePage();
+        Grades gradesPage = new Grades();
+
         public MainWindow()
         {
             InitializeComponent();
-            NavigationFrame.Navigate(new HomePage());
+
+            
+            NavigationFrame.Navigate(homePage);
             this.WindowState = WindowState.Maximized;
         }
 
         private void gradesBtn_Click(object sender, RoutedEventArgs e)
         {
 
-            NavigationFrame.Navigate(new Grades());
+            NavigationFrame.Navigate(gradesPage);
         }
 
         private void generalBtn_Click(object sender, RoutedEventArgs e)
         {
 
-            NavigationFrame.Navigate(new HomePage());
+            NavigationFrame.Navigate(homePage);
+        }
+
+        private void timetableBtn_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

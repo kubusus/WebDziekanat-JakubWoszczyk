@@ -14,6 +14,7 @@ namespace WebDziekanat
         public double Grade { get; set; }
         public string Lecturer { get; set; }
 
+        private static Random rand = new Random();
         public Subject()
         {
 
@@ -21,7 +22,6 @@ namespace WebDziekanat
 
         public Subject(string name, int ECTS, double grade, string lecturer)
         {
-            Random rand = new Random();
             this.Id = rand.Next(100000, 999999).ToString();
             this.Name = name;
             this.ECTS = ECTS;

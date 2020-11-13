@@ -116,7 +116,13 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Resource Include="Images\badge.png" />
+    <Resource Include="Images\books.png" />
+    <Resource Include="Images\home.png" />
+    <Resource Include="Images\mail.png" />
+    <Resource Include="Images\timetable.png" />
+  </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\logo.png" />
   </ItemGroup>

@@ -11,6 +11,9 @@
 
     <DockPanel>
 
+        <TextBlock DockPanel.Dock="Top" Text="Dashboard"
+                   HorizontalAlignment="Center"
+                   FontSize="60" FontWeight="DemiBold"/>
 
 
         <Grid>
@@ -26,7 +29,7 @@
                 <RowDefinition Height="auto"/>
             </Grid.RowDefinitions>
 
-            <StackPanel Margin="10">
+            <StackPanel Margin="10" Background="#FFEBEBEB">
                 <TextBlock FontWeight="Black">Your data</TextBlock>
                 <local:DataField Badge="Name" Content="Jakub"/>
                 <local:DataField Badge="Surname" Content="Woszczyk"/>
@@ -35,7 +38,7 @@
                 <local:DataField Badge="Course" Content="Computer Science"/>
             </StackPanel>
 
-            <StackPanel Grid.Column="1" Margin="10">
+            <StackPanel Grid.Column="1" Margin="10" Background="#FFF6F6F6">
                 <TextBlock FontWeight="Black">Abut the course</TextBlock>
                 <local:DataField Badge="Mode of study" Content="full-time"/>
                 <local:DataField Badge="nr of years" Content="3.5" x:Name="years"/>
@@ -60,7 +63,7 @@
             </StackPanel>
 
 
-            <StackPanel Grid.Row="1" Margin="10">
+            <StackPanel Grid.Row="1" Margin="10" Background="#FFF3F3F3" >
                 <TextBlock FontWeight="Black">Stats:</TextBlock>
                 <Grid>
                     <ProgressBar Name="AvgProgress"
@@ -68,6 +71,24 @@
                                  Minimum="2" Maximum="5" Value="4.38"
                                  Height="20"/>
                     <local:DataField Badge="Total average" Content="{Binding ElementName=AvgProgress, Path=Value}"/>
+                </Grid>
+            </StackPanel>
+
+            <StackPanel Grid.Row="1" Grid.Column="1" Margin="10" Background="#FFEBEBEB" >
+                <TextBlock FontWeight="Black">Deadline monitor:</TextBlock>
+                <Grid ToolTip="17 days left">
+                    <ProgressBar Name="StudentIdDeadline"
+                                 Foreground="DarkOrange"
+                                 Minimum="0" Maximum="183" Value="168"
+                                 Height="20"/>
+                    <local:DataField Badge="Student ID" Content="30.11.2020"/>
+                </Grid>
+                <Grid ToolTip="17 days left">
+                    <ProgressBar Name="InsuranceDeadline"
+                                 Foreground="GreenYellow"
+                                 Minimum="0" Maximum="365" Value="14"
+                                 Height="20"/>
+                    <local:DataField Badge="Insurance" Content="30.09.2021"/>
                 </Grid>
             </StackPanel>
 

@@ -26,6 +26,35 @@
                    Width="120"
                    Stretch="UniformToFill"/>
 
+            <TextBlock Text="WebDziekanat"
+                       HorizontalAlignment="Left" VerticalAlignment="Center"
+                       Margin="10"
+                       FontSize="60" FontWeight="ExtraBlack" 
+                       Background="DarkRed" Foreground="#FFA09FA4" FontFamily="ISOCTEUR"/>
+
+            <StackPanel Orientation="Horizontal"
+                        Margin="5"
+                        HorizontalAlignment="Right" VerticalAlignment="Bottom">
+
+                <TextBlock Text="student: "
+                           Margin="0,0,0,0"
+                           FontSize="15" FontWeight="Medium"
+                           Background="DarkRed" Foreground="#FFA09FA4"/>
+
+                <TextBlock Text="Jakub Woszczyk"
+                           Margin="5,0,0,0"
+                           FontSize="15" FontWeight="Bold"
+                           Background="DarkRed" Foreground="#FFA09FA4"/>
+
+
+                <TextBlock Text="log out"
+                           Margin="20,0,0,0"
+                           FontSize="15" FontWeight="ExtraBlack" TextDecorations="underline"
+                           Background="DarkRed" Foreground="#FFA09FA4"/>
+
+            </StackPanel>
+            
+
 
         </Grid>
         
@@ -36,18 +65,37 @@
             
             <WrapPanel DockPanel.Dock="Top" HorizontalAlignment="Center">
                 <Menu>
-                    <MenuItem Header="My data">
-                        <MenuItem Name="generalBtn" Header="General" Click="generalBtn_Click"/>
-                        <MenuItem Header="Grades"/>
+                    <MenuItem Name="generalBtn" Header="Home" Click="generalBtn_Click">
+                        <MenuItem.Icon>
+                            <Image Source="/Images/home.png"/>
+                        </MenuItem.Icon>
                     </MenuItem>
-                    <MenuItem Name="gradesBtn" Header="Grades" Click="gradesBtn_Click"/>
-                    <MenuItem Header="Email"/>
-                    <MenuItem Header="Wikamp"/>
+                    <MenuItem Name="gradesBtn" Header="Grades" Click="gradesBtn_Click">
+                        <MenuItem.Icon>
+                            <Image Source="/Images/badge.png"/>
+                        </MenuItem.Icon>
+                    </MenuItem>
+                    <MenuItem Name="timetableBtn" Header="Timetable" Click="timetableBtn_Click">
+                        <MenuItem.Icon>
+                            <Image Source="/Images/timetable.png"/>
+                        </MenuItem.Icon>
+                    </MenuItem>
+                    <MenuItem Header="Email">
+                        <MenuItem.Icon>
+                            <Image Source="/Images/mail.png"/>
+                        </MenuItem.Icon>
+                    </MenuItem>
+                    <MenuItem Header="Wikamp">
+                        <MenuItem.Icon>
+                            <Image Source="/Images/books.png"/>
+                        </MenuItem.Icon>
+                    </MenuItem>
                 </Menu>
             </WrapPanel>
         
         
-            <Frame x:Name="NavigationFrame" NavigationUIVisibility="Hidden"/>
+            <Frame x:Name="NavigationFrame" NavigationUIVisibility="Hidden"
+                   Background="White"/>
         
         </DockPanel>
     </Grid>

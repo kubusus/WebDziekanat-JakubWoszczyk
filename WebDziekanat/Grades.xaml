@@ -22,7 +22,7 @@
 
                     <DataGrid.Columns>
 
-                        <DataGridTemplateColumn Header="Id">
+                        <DataGridTemplateColumn Header="Id" Width="auto">
                             <DataGridTemplateColumn.CellTemplate>
                                 <DataTemplate>
                                     <TextBlock Text="{Binding Id}" Padding="10,0,10,0"/>
@@ -30,43 +30,47 @@
                             </DataGridTemplateColumn.CellTemplate>
                         </DataGridTemplateColumn>
 
-                        <DataGridTemplateColumn Header="Subject">
+                        <DataGridTemplateColumn Header="Subject" Width="3*">
                             <DataGridTemplateColumn.CellTemplate>
                                 <DataTemplate>
-                                    <TextBlock Text="{Binding Name}" Padding="10,0,10,0"/>
+                                    <TextBlock Text="{Binding Name}" Padding="10,0,10,0"
+                                               TextWrapping="Wrap"/>
                                 </DataTemplate>
                             </DataGridTemplateColumn.CellTemplate>
                         </DataGridTemplateColumn>
 
-                        <DataGridTemplateColumn Header="Lecturer">
+                        <DataGridTemplateColumn Header="Lecturer" Width="3*">
                             <DataGridTemplateColumn.CellTemplate>
                                 <DataTemplate>
-                                    <TextBlock Text="{Binding Lecturer}" Padding="10,0,10,0"/>
+                                    <TextBlock Text="{Binding Lecturer}" Padding="10,0,10,0"
+                                               TextWrapping="Wrap"/>
                                 </DataTemplate>
                             </DataGridTemplateColumn.CellTemplate>
                         </DataGridTemplateColumn>
 
-                        <DataGridTemplateColumn Header="ECTS" Width="160">
+                        <DataGridTemplateColumn Header="ECTS" Width="*">
                             <DataGridTemplateColumn.CellTemplate>
                                 <DataTemplate>
                                     <Grid>
                                         <ProgressBar Minimum="0" Maximum="10" Value="{Binding ECTS}"
-                                                     Foreground="DarkRed"/>
+                                                     Foreground="DarkRed"
+                                                     Height="25" VerticalAlignment="Top"/>
                                         <TextBlock Text="{Binding ECTS}"
-                                                   HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                                                   HorizontalAlignment="Left" VerticalAlignment="Top"/>
                                     </Grid>
                                 </DataTemplate>
                             </DataGridTemplateColumn.CellTemplate>
                         </DataGridTemplateColumn>
 
-                        <DataGridTemplateColumn Header="Grade" Width="160">
+                        <DataGridTemplateColumn Header="Grade" Width="*">
                             <DataGridTemplateColumn.CellTemplate>
                                 <DataTemplate>
                                     <Grid>
                                         <ProgressBar Minimum="2" Maximum="5" Value="{Binding Grade}"
-                                                     Foreground="Gold"/>
+                                                     Foreground="Gold" Loaded="ProgressBar_Loaded"
+                                                     Height="25" VerticalAlignment="Top"/>
                                         <TextBlock Text="{Binding Grade}"
-                                                   HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                                                   HorizontalAlignment="Left" VerticalAlignment="Top"/>
                                     </Grid>
                                 </DataTemplate>
                             </DataGridTemplateColumn.CellTemplate>
@@ -87,7 +91,7 @@
 
                     <DataGrid.Columns>
 
-                        <DataGridTemplateColumn Header="Id">
+                        <DataGridTemplateColumn Header="Id" Width="auto">
                             <DataGridTemplateColumn.CellTemplate>
                                 <DataTemplate>
                                     <TextBlock Text="{Binding Id}" Padding="10,0,10,0"/>
@@ -95,43 +99,47 @@
                             </DataGridTemplateColumn.CellTemplate>
                         </DataGridTemplateColumn>
 
-                        <DataGridTemplateColumn Header="Subject">
+                        <DataGridTemplateColumn Header="Subject" Width="3*">
                             <DataGridTemplateColumn.CellTemplate>
                                 <DataTemplate>
-                                    <TextBlock Text="{Binding Name}" Padding="10,0,10,0"/>
+                                    <TextBlock Text="{Binding Name}" Padding="10,0,10,0"
+                                               TextWrapping="Wrap"/>
                                 </DataTemplate>
                             </DataGridTemplateColumn.CellTemplate>
                         </DataGridTemplateColumn>
 
-                        <DataGridTemplateColumn Header="Lecturer">
+                        <DataGridTemplateColumn Header="Lecturer" Width="3*">
                             <DataGridTemplateColumn.CellTemplate>
                                 <DataTemplate>
-                                    <TextBlock Text="{Binding Lecturer}" Padding="10,0,10,0"/>
+                                    <TextBlock Text="{Binding Lecturer}" Padding="10,0,10,0"
+                                               TextWrapping="Wrap"/>
                                 </DataTemplate>
                             </DataGridTemplateColumn.CellTemplate>
                         </DataGridTemplateColumn>
 
-                        <DataGridTemplateColumn Header="ECTS" Width="160">
+                        <DataGridTemplateColumn Header="ECTS" Width="*">
                             <DataGridTemplateColumn.CellTemplate>
                                 <DataTemplate>
                                     <Grid>
                                         <ProgressBar Minimum="0" Maximum="10" Value="{Binding ECTS}"
-                                                     Foreground="DarkRed"/>
+                                                     Foreground="DarkRed"
+                                                     Height="25" VerticalAlignment="Top"/>
                                         <TextBlock Text="{Binding ECTS}"
-                                                   HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                                                   HorizontalAlignment="Left" VerticalAlignment="Top"/>
                                     </Grid>
                                 </DataTemplate>
                             </DataGridTemplateColumn.CellTemplate>
                         </DataGridTemplateColumn>
 
-                        <DataGridTemplateColumn Header="Grade" Width="160">
+                        <DataGridTemplateColumn Header="Grade" Width="*">
                             <DataGridTemplateColumn.CellTemplate>
                                 <DataTemplate>
                                     <Grid>
                                         <ProgressBar Minimum="2" Maximum="5" Value="{Binding Grade}"
-                                                     Foreground="Gold"/>
+                                                     Foreground="Gold" Loaded="ProgressBar_Loaded"
+                                                     Height="25" VerticalAlignment="Top"/>
                                         <TextBlock Text="{Binding Grade}"
-                                                   HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                                                   HorizontalAlignment="Left" VerticalAlignment="Top"/>
                                     </Grid>
                                 </DataTemplate>
                             </DataGridTemplateColumn.CellTemplate>
@@ -155,7 +163,7 @@
 
                     <DataGrid.Columns>
 
-                        <DataGridTemplateColumn Header="Id">
+                        <DataGridTemplateColumn Header="Id" Width="auto">
                             <DataGridTemplateColumn.CellTemplate>
                                 <DataTemplate>
                                     <TextBlock Text="{Binding Id}" Padding="10,0,10,0"/>
@@ -163,43 +171,47 @@
                             </DataGridTemplateColumn.CellTemplate>
                         </DataGridTemplateColumn>
 
-                        <DataGridTemplateColumn Header="Subject">
+                        <DataGridTemplateColumn Header="Subject" Width="3*">
                             <DataGridTemplateColumn.CellTemplate>
                                 <DataTemplate>
-                                    <TextBlock Text="{Binding Name}" Padding="10,0,10,0"/>
+                                    <TextBlock Text="{Binding Name}" Padding="10,0,10,0"
+                                               TextWrapping="Wrap"/>
                                 </DataTemplate>
                             </DataGridTemplateColumn.CellTemplate>
                         </DataGridTemplateColumn>
 
-                        <DataGridTemplateColumn Header="Lecturer">
+                        <DataGridTemplateColumn Header="Lecturer" Width="3*">
                             <DataGridTemplateColumn.CellTemplate>
                                 <DataTemplate>
-                                    <TextBlock Text="{Binding Lecturer}" Padding="10,0,10,0"/>
+                                    <TextBlock Text="{Binding Lecturer}" Padding="10,0,10,0"
+                                               TextWrapping="Wrap"/>
                                 </DataTemplate>
                             </DataGridTemplateColumn.CellTemplate>
                         </DataGridTemplateColumn>
 
-                        <DataGridTemplateColumn Header="ECTS" Width="160">
+                        <DataGridTemplateColumn Header="ECTS" Width="*">
                             <DataGridTemplateColumn.CellTemplate>
                                 <DataTemplate>
                                     <Grid>
                                         <ProgressBar Minimum="0" Maximum="10" Value="{Binding ECTS}"
-                                                     Foreground="DarkRed"/>
+                                                     Foreground="DarkRed"
+                                                     Height="25" VerticalAlignment="Top"/>
                                         <TextBlock Text="{Binding ECTS}"
-                                                   HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                                                   HorizontalAlignment="Left" VerticalAlignment="Top"/>
                                     </Grid>
                                 </DataTemplate>
                             </DataGridTemplateColumn.CellTemplate>
                         </DataGridTemplateColumn>
 
-                        <DataGridTemplateColumn Header="Grade" Width="160">
+                        <DataGridTemplateColumn Header="Grade" Width="*">
                             <DataGridTemplateColumn.CellTemplate>
                                 <DataTemplate>
                                     <Grid>
                                         <ProgressBar Minimum="2" Maximum="5" Value="{Binding Grade}"
-                                                     Foreground="Gold"/>
+                                                     Foreground="Gold" Loaded="ProgressBar_Loaded"
+                                                     Height="25" VerticalAlignment="Top"/>
                                         <TextBlock Text="{Binding Grade}"
-                                                   HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                                                   HorizontalAlignment="Left" VerticalAlignment="Top"/>
                                     </Grid>
                                 </DataTemplate>
                             </DataGridTemplateColumn.CellTemplate>
