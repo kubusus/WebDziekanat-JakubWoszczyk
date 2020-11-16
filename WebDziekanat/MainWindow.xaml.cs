@@ -21,6 +21,7 @@ namespace WebDziekanat
 
         HomePage homePage = new HomePage();
         Grades gradesPage = new Grades();
+        TimetablePage timetablePage = new TimetablePage();
 
         public MainWindow()
         {
@@ -39,13 +40,13 @@ namespace WebDziekanat
 
         private void generalBtn_Click(object sender, RoutedEventArgs e)
         {
-
             NavigationFrame.Navigate(homePage);
         }
 
         private void timetableBtn_Click(object sender, RoutedEventArgs e)
         {
 
+            NavigationFrame.Navigate(timetablePage);
         }
     }
 }
