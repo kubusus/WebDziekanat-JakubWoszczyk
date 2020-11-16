@@ -41,7 +41,7 @@ namespace WebDziekanat
             semester2.Add(new Subject("Databases", 3, 4.5, "prof. dr hab. inż. Adam Pelikant"));
             semester2.Add(new Subject("Java Fundamentals", 3, 5, "dr inż. Bartosz Sakowicz"));
 
-            semester3.Add(new Subject("Computer Graphics", 3, 4, ""));
+            semester3.Add(new Subject("Computer Graphics", 3, 4, "dr hab.inż.Mariusz Zubert"));
             semester3.Add(new Subject("Mathematics", 6, 4, "dr inż. Sławomir Jagodziński"));
             semester3.Add(new Subject("Electronics ", 3, 4.5, "dr hab. inż. Marcin Janicki"));
             semester3.Add(new Subject("Digital Systems ", 4, 5, "dr inż. Piotr Dębiec"));

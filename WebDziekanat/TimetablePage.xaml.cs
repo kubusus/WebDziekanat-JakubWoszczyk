@@ -26,9 +26,12 @@ namespace WebDziekanat
         public TimetablePage()
         {
             InitializeComponent();
+
             timer.Interval = TimeSpan.FromSeconds(1);
             timer.Tick += timer_Tick;
             timer.Start();
+
+            Grid.SetRow(dayPointerRectanle, (int)DateTime.Now.DayOfWeek);
         }
 
         void timer_Tick(object sender, EventArgs e)
@@ -38,7 +41,7 @@ namespace WebDziekanat
             double currentTime = DateTime.Now.Hour * 60 + DateTime.Now.Minute;
             double position = pointerCanvas.ActualWidth * ( (currentTime-timetableStart) / (timetableEnd-timetableStart))  - timePointer.ActualWidth; ;
 
-            currentTimeTxtb.Text = DateTime.Now.Hour.ToString() + ":" + DateTime.Now.Minute.ToString();
+            currentTimeTxtb.Text = DateTime.Now.Hour.ToString("D2") + ":" + DateTime.Now.Minute.ToString("D2");
             Canvas.SetLeft(timePointer, position);
             Canvas.SetLeft(currentTimeTxtb, position);
         }
