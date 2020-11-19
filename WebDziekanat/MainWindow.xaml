@@ -30,7 +30,7 @@
                        HorizontalAlignment="Left" VerticalAlignment="Center"
                        Margin="10"
                        FontSize="60" FontWeight="ExtraBlack" 
-                       Background="DarkRed" Foreground="#FFA09FA4" FontFamily="ISOCTEUR"/>
+                       Background="Transparent" Foreground="#FFA09FA4" FontFamily="ISOCTEUR"/>
 
             <StackPanel Orientation="Horizontal"
                         Margin="5"
@@ -70,26 +70,69 @@
                             <Image Source="/Images/home.png"/>
                         </MenuItem.Icon>
                     </MenuItem>
+                    
                     <MenuItem Name="gradesBtn" Header="Grades" Click="gradesBtn_Click">
                         <MenuItem.Icon>
                             <Image Source="/Images/badge.png"/>
                         </MenuItem.Icon>
                     </MenuItem>
+                    
                     <MenuItem Name="timetableBtn" Header="Timetable" Click="timetableBtn_Click">
                         <MenuItem.Icon>
                             <Image Source="/Images/timetable.png"/>
                         </MenuItem.Icon>
                     </MenuItem>
+                    
                     <MenuItem Header="Email">
                         <MenuItem.Icon>
                             <Image Source="/Images/mail.png"/>
                         </MenuItem.Icon>
                     </MenuItem>
+                    
                     <MenuItem Header="Wikamp">
                         <MenuItem.Icon>
                             <Image Source="/Images/books.png"/>
                         </MenuItem.Icon>
                     </MenuItem>
+
+                    <MenuItem Header="Useful">
+                        <MenuItem.Icon>
+                            <Image Source="/Images/thumbUp.png" />
+                        </MenuItem.Icon>
+
+                        <MenuItem Header="Documents templates">
+                            <MenuItem.Icon>
+                                <Image Source="/Images/document.png"/>
+                            </MenuItem.Icon>
+
+                            <MenuItem Header="Applications">
+                                <MenuItem Header="Change study program"/>
+                                <MenuItem Header="Indywidualny plan studiów"/>
+                                <MenuItem Header="Urlop długoterminowy"/>
+                                <MenuItem Header="Urlop krótkoterminowy"/>
+                                <MenuItem Header="Wnioski o pomoc materialną"/>
+                                <MenuItem Header="Przedmioty ponadprogramowe"/>
+                                <MenuItem Header="Erasumus"/>
+                                <MenuItem Header="Schoolarships"/>
+                            </MenuItem>
+                        </MenuItem>
+                    
+                    
+                        <MenuItem Header="Your study program">
+                            <MenuItem.Icon>
+                                <Image Source="/Images/signpost.png" />
+                            </MenuItem.Icon>
+                        </MenuItem>
+                    </MenuItem>
+                    
+                        <MenuItem Name="ContactsBtn" 
+                                  Header="Contacts"
+                                  Click="ContactsBtn_Click">
+                            <MenuItem.Icon>
+                                <Image Source="/Images/telephoneBook.png" />
+                            </MenuItem.Icon>
+                        </MenuItem>
+                    
                 </Menu>
             </WrapPanel>
         

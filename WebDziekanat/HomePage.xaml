@@ -4,10 +4,9 @@
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:WebDziekanat"
-      mc:Ignorable="d"
-      d:DesignHeight="450" d:DesignWidth="800"
+      mc:Ignorable="d" d:DesignWidth="800"
       Title="HomePage"
-      Background="White">
+      Background="White" Height="659.6" VerticalAlignment="Top">
 
 
     <DockPanel>
@@ -16,7 +15,7 @@
                    Style="{StaticResource HeaderTextBoxStyle}"/>
 
 
-        <Grid>
+        <Grid DockPanel.Dock="Top">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition/>
                 <ColumnDefinition/>
@@ -93,5 +92,26 @@
             </StackPanel>
 
         </Grid>
+
+        <TextBlock Text="Announcements" Margin="0,60,0,0" DockPanel.Dock="Top"
+                    Style="{StaticResource HeaderTextBoxStyle}"/>
+
+        <StackPanel Background="#FFEBEBEB">
+            <StackPanel.Resources>
+                <Style TargetType="TextBlock">
+                    <Setter Property="FontSize" Value="20"/>
+                    <Setter Property="FontWeight" Value="DemiBold"/>
+                    <Setter Property="Margin" Value="60,10,60,10"/>
+                    <Setter Property="FontSize" Value="20"/>
+                </Style>
+            </StackPanel.Resources>
+
+            <TextBlock Foreground="DarkRed">The site is unavailable every night between 23.00 and 02.00 due to maintenance tasks</TextBlock>
+            <TextBlock>Łódzkie Dni informatyki 24-27.11.2020  <Hyperlink>Read more</Hyperlink></TextBlock>
+            <TextBlock Foreground="DarkRed">Dean's hours 24.11.2020 8.00 - 12.00 <Hyperlink>Read more</Hyperlink></TextBlock>
+            
+        </StackPanel>
+
+
     </DockPanel>
 </Page>

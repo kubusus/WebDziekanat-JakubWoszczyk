@@ -1,0 +1,71 @@
+﻿<Page x:Class="WebDziekanat.ContactsPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:WebDziekanat"
+      mc:Ignorable="d" d:DesignHeight="450" d:DesignWidth="800"
+      Title="ContactsPage"
+      Background="White" Height="476.024" VerticalAlignment="Top">
+
+    <DockPanel Height="auto" VerticalAlignment="Top">
+
+        <TextBlock DockPanel.Dock="Top" Text="Contacts"
+                   Style="{StaticResource HeaderTextBoxStyle}"/>
+
+
+        <Grid DockPanel.Dock="Top">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+            </Grid.RowDefinitions>
+
+            <StackPanel Margin="10" Background="#FFEBEBEB">
+                <TextBlock FontWeight="Black" Background="Gray">IFE</TextBlock>
+                <local:DataField Badge="Address" Content="90‐539 Łódź, 36 Żwirki St."/>
+                <local:DataField Badge="Telephone" Content="+48 42 638-38-00"/>
+                <local:DataField Badge="Email" Content="ife@adm.p.lodz.pl"/>
+
+                <TextBlock FontWeight="SemiBold" Background="LightGray">Students' affairs:</TextBlock>
+                <local:DataField Badge="Address" Content="ul. Ks. Skorupki 10/12, B3"/>
+                <local:DataField Badge="Telephone" Content="+48 42 631 20 33"/>
+                <local:DataField Badge="Email" Content="ife@adm.p.lodz.pl"/>
+
+                <TextBlock FontWeight="SemiBold" Background="LightGray">Recrutacion section:</TextBlock>
+                <local:DataField Badge="Address" Content="ul. Radwańska 29, A13"/>
+                <local:DataField Badge="Telephone" Content="48 42 631 20 92"/>
+                <local:DataField Badge="Email" Content="rekrutacja@info.p.lodz.pl"/>
+            </StackPanel>
+
+            <StackPanel Margin="10" Background="#FFEBEBEB" Grid.Column="1">
+                <TextBlock FontWeight="Black" Background="Gray">WEEIA</TextBlock>
+                <local:DataField Badge="Address" Content="Bohdana Stefanowskiego 18/22"/>
+                <local:DataField Badge="Telephone" Content="+48 42 638-38-00"/>
+                <local:DataField Badge="Email" Content="weeia@adm.p.lodz.pl"/>
+
+                <TextBlock FontWeight="SemiBold" Background="LightGray">Students' affairs:</TextBlock>
+                <local:DataField Badge="Address" Content="ul. Ks. Skorupki 10/12, B3"/>
+                <local:DataField Badge="Telephone" Content="+48 42 631 20 33"/>
+                <local:DataField Badge="Email" Content="weeia@adm.p.lodz.pl"/>
+
+                <TextBlock FontWeight="SemiBold" Background="LightGray">Recrutacion section:</TextBlock>
+                <local:DataField Badge="Address" Content="ul. Radwańska 29, A13"/>
+                <local:DataField Badge="Telephone" Content="48 42 631 20 92"/>
+                <local:DataField Badge="Email" Content="rekrutacja@info.p.lodz.pl"/>
+            </StackPanel>
+
+        </Grid>
+
+        <TextBlock FontWeight="SemiBold" ><Hyperlink>Show all faculties</Hyperlink></TextBlock>
+
+
+
+    </DockPanel>
+</Page>
